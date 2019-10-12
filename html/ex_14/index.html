@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create User</title>
+</head>
+
+<body>
+    <h1>Create User</h1>
+    <hr>
+    <form action="create_user.html" method="GET" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+            <legend>User Form</legend>
+            <div><label>Username: </label>
+                <input type="text" name="username" placeholder="Username" size="30" maxlength="12"></div>
+            <div><label for="password">Password: </label>
+                <input type="password" size="30" maxlength="8" placeholder="Password"></div>
+            <div>
+                <label for="superheros">Select your favourite superheroe: </label>
+                <input type="radio" name="superheros" value="Superman"> Superman
+                <input type="radio" name="superheros" value="Batman" checked="checked">Batman
+                <input type="radio" name="superheros" value="Wonder Woman"> Wonder Woman
+                <input type="radio" name="superheros" value="Flash"> Flash
+                <input type="radio" name="superheros" value="Thor">Thor
+                <input type="radio" name="superheros" value="Hulk">Hulk
+            </div>
+            <div>
+                <label for="videogames">Select your favourite video game: </label>
+                <input type="checkbox" name="videogames" value="Fifa" checked> Fifa
+                <input type="checkbox" name="videogames" value="Residen Evil"> Residen Evil
+                <input type="checkbox" name="videogames" value="Uncharted" checked> Uncharted
+
+            </div>
+            <div><input type="hidden" name="userid" value="2300"></div>
+            <div>
+                <lable for="about">About Me:</lable>
+                <textarea name="about" id="" cols="30" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="options">Select your favourite options: </label>
+                <select name="options" multiple>
+                    <option value="">Select an Option</option>
+                    <option value="1" selected>First Option</option>
+                    <option value="2">Second Option</option>
+                </select>
+            </div>
+            <div>
+                <label for="filename">Select a File: </label>
+                <input type="file" name="filename" multiple />
+            </div>
+            <div>
+                <label for="birthdate">Birthdate: </label>
+                <input type="date" name="birthdate" placeholder="BirthDate">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div>
+                <label for="url">URL: </label>
+                <input type="url" name="url" placeholder="URL">
+            </div>
+            <div>
+                <label for="phone">Phone: </label>
+                <input type="text" name="phone" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
+                    placeholder="Phone">
+            </div>
+            <div>
+                <label for="search">search: </label>
+                <input type="search" name="query" placeholder="Search">
+            </div>
+            <div>
+            </div>
+            <div>
+                <button type="submit" value="Create Account">Create Account</button>
+            </div>
+        </fieldset>
+
+    </form>
+    <form action="https://www.google.ca/search">
+        <fieldset>
+        <legend>Search Form</legend>
+        <div><input type="search" name="q" result="5"></div>
+        <div><button type="submit">Search</button></div>
+        
+    </fieldset>
+    </form>
+</body>
+
+</html>
