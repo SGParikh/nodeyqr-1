@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Create User</title>
+</head>
+<body>
+    <h1>Create User</h1>
+    <hr>
+    <form>
+        <div>
+            <lable for="name">Name: </lable>
+            <input type="text" name="name" placeholder="Name">
+        </div>
+        <div>
+            <label for="superheroes"> Select a superheroes:</label>
+            <select name="superheroes">
+                    <option value="deadpool"> Deadpool</option> 
+                    <option value="batman_vs_superman"> Batman v Superman </option>
+                    <option value="civil_war"> Captain America: Civil War </option>
+                    <option value="doctor_strange"> Doctor Strange </option>
+                    <option value="suicide_squad"> Suicide Squad </option>
+                    <option value="apocalypse"> X-Men: Apocalypse </option>
+                    <option value="gotg_vol2"> Guardians of the Galaxy Vol 2 </option>
+                    <option value="justice_league"> Justice League </option>
+                    <option value="logan"> Logan </option>
+                    <option value="homecoming"> Spider-Man: Homecoming </option>
+                    <option value="wonder_woman" selected> Wonder Woman </option>
+                    <option value="thor_ragnarok"> Thor: Ragnarok </option>
+                    <option value="black_panther"> Black Panther </option>
+            </select>
+        </div>
+        <div>
+            <lable for="bio">Bio: </lable>
+            <textarea name="bio" cols="50" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="upload">Select a File: </label>
+            <input type="file" name="upload">
+        </div>
+        <br>
+        <div>
+            <button type="reset">Clear Form</button>
+            <button type="submit">Add new user</button>
+        </div>
+    </form>
+</body>
+</html>
