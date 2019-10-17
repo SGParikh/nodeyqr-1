@@ -1,3 +1,3 @@
 # HTML
 ## Exercises
-### 1. [Exercise 1](html\index1.html)
+### 1. [Exercise 1](index1.html)
