@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    var getsecond=parseInt(window.prompt("Please enter number of seconds"))
+    var applysecond=parseInt(getsecond)
+    var leftsecond=1
+    var nIntervId= setInterval(function(){
+        if(leftsecond > getsecond)
+        {
+            console.log('Your session has expired, come again soon!');
+            clearInterval(nIntervId)
+        }
+        else{
+            console.log(applysecond);
+        }
+            leftsecond += 1
+            applysecond -=1
+        }, 1000)
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
