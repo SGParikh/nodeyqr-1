@@ -7,5 +7,5 @@ var dateOfBirth
 fiestName="Sweta"
 lastName="Parikh"
 age=27
-dateOfBirth='06/26/1992'
+dateOfBirth=Date('06/26/1992')
 address='6 Reserch Drive'

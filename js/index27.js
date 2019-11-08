@@ -1,6 +1,7 @@
 let firstNumber=2
 let secondNumber=3
 console.log(firstNumber++)
+console.log(--firstNumber)
 console.log(--secondNumber)
 console.log(firstNumber--)
 console.log(--secondNumber)
