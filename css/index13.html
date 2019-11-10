@@ -3,6 +3,25 @@
   <head>
     <title>Learning CSS</title>
     <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      article{
+        border:1px solid gray;
+      }
+      .hidden{
+        background:#ddd;
+
+      }
+      .remove{
+        background:#999;
+      }
+      article.hidden > h1{
+        visibility: hidden;
+      }
+      article.remove > h1{
+        display:none;
+      }
     </style>
   </head>
   <body>
