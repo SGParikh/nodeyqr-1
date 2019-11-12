@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <style>
+    .error { 
+      color: red; 
+      background-color: pink;
+      border: 1px solid red;
+      padding: 5px;
+    }
+  </style>
+  <script>
+        window.onload=function(){
+            var form=document.querySelector('form')
+            var username = form.elements[0];
+            var password = form.elements[1];
+            var email = form.elements[2];
+            const validateAlphanumeric = function(value) {
+               
+                const regex = /^[a-zA-Z0-9]*$/;
+                
+                return regex.test(value);
+            }
+            const validateEmail = function(email) {
+            // this is a simple email validation regex
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            
+            // this text method will return a true/false value depending if the string matches the regex or not
+            return emailRegex.test(email);
+            }
+            form.onsubmit=function(event){
+                event.preventDefault();
+                var div=document.getElementById('errors')
+                if (username.value.length === 0 || password.value.length === 0) {
+                    
+                    div.innerHTML='Please input a username and password<br/>';
+                    return false;
+                }
+                if (!validateAlphanumeric(username.value) || !validateAlphanumeric(password.value)) {
+                    div.innerHTML='username and password only contains numbers and letters (alphanumeric)<br/>';
+                   
+                    return false;
+                }
+                if (!validateEmail(email.value)) {
+                    div.innerHTML='Incorrect Email<br/>';
+                    return false;
+                }
+                return true;
+            }
+        }
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="email" id="email" name="email" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div id="errors"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+            window.onload=function(){
+                const apiURL = 'https://swapi.co/api/films/';
+                fetch(apiURL).then(function(responce){
+                    return responce.json();
+                })
+                .then(function(data) {
+                    
+                    console.log(data.results);
+                    for (let index = 0; index < data.results.length; index++) {
+                        const p=document.createElement('p')
+                        const element = data.results[index];
+                        p.innerHTML=`title: ${data.results[index].title} <br/>
+                                        episode_id: ${data.results[index].episode_id} <br/>
+                                        release_date: ${data.results[index].release_date} <br/>`
+                        document.body.appendChild(p)
+                    }
+                });
+            }
+  </script>
+</head>
+<body>
+    
+</body>
+</html>
