@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+<script>
+     window.onload=function(){
+        var count=1
+        var ul=document.querySelector('ul')
+          var listItem=ul.children
+          var li=document.querySelector('li')
+          li.classList.add('orange')
+         while(!!li.nextElementSibling){
+                li=li.nextElementSibling
+                li.classList.add('orange')
+                count++
+                console.log(li)
+          }
+          while(!!li.previousElementSibling){
+              li=li.previousElementSibling
+              count--
+              if(count === 3)
+              {
+                  li.classList.replace('orange','red')
+              }
+              else if(count === 1)
+              {
+                li.classList.replace('orange','green')
+              }
+              console.log(li)
+          }
+        
+     }
+
+      
+
+</script>
+
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>

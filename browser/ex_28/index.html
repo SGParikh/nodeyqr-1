@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload = function () {
+            const body = document.body
+            var name = window.prompt("Please input your name")
+            var ul = document.createElement('ul')
+            var nameArray = []
+            nameArray.push(name)
+            while (confirm("Do you want to continue?")) {
+                var name1 = window.prompt("Please input your name")
+                nameArray.push(name1)
+            }
+            var color
+            if(nameArray.length % 2 == 0)
+            {
+                color='#ddd'
+            }
+            else
+            {
+                color='#eee'
+            }
+            for (let index = 0; index < nameArray.length; index++) {
+                const li = document.createElement('li')
+                li.innerText = nameArray[index]
+                li.style.color=color
+                ul.appendChild(li)
+            }
+            body.appendChild(ul)
+
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
