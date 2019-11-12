@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+            window.onload = function () {
+                function clickHandler()
+                {
+                    alert('You clicked an event listened element')
+                }
+                const button1=document.getElementById('firstButton')
+                button1.addEventListener('click',clickHandler)
+            }
+    </script>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  </body>
+</html>
